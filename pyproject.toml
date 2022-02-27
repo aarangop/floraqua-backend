@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "floraqua-backend"
+version = "0.1.0"
+description = "Backend for Floraqua house plant irrigation project"
+authors = ["Andrés Arango Pérez <andresap@protonmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.74.1"
+uvicorn = "^0.17.5"
+motor = "^2.5.1"
+python-dotenv = "^0.19.2"
+dnspython = "^2.2.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+autopep8 = "^1.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
