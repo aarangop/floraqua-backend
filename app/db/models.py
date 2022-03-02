@@ -20,7 +20,7 @@ class PyObjectId(ObjectId):
 
 
 class VirtualNode(BaseModel):
-    id: PyObjectId = Field(default_factory=PyObjectId, alias="_id")
+    id: Optional[PyObjectId] = Field(default_factory=PyObjectId, alias="_id")
     name: str = Field(...)
     plant: str = Field(...)
     target_moisture: int = Field(..., gt=0, le=100)

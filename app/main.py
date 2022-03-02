@@ -6,14 +6,14 @@ from app.config import get_config
 
 from app.routes.nodes import router as nodes_router
 
-app = FastAPI(title="Floraqua API", prefix="/api")
+app = FastAPI(title="Floraqua API",)
 app.include_router(nodes_router)
 
 
 @app.on_event("startup")
 async def startup():
     config = get_config()
-    await db.connect_to_database(path=config.db_path, db_name=config.db_name)
+    await db.connect_to_database(db_path=config.get_connstr(), db_name=config.db_name)
 
 
 @app.on_event("shutdown")

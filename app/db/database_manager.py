@@ -14,7 +14,10 @@ class DatabaseManager(object):
         raise NotImplementedError
 
     @abstractmethod
-    async def connect_to_database(self, path: str):
+    async def connect_to_database(
+            self,
+            db_path: str,
+            db_name: str):
         pass
 
     @abstractmethod
@@ -23,6 +26,10 @@ class DatabaseManager(object):
 
     @abstractmethod
     async def get_virtual_nodes(self) -> List[VirtualNode]:
+        pass
+
+    @abstractmethod
+    async def add_node(self, node: VirtualNode):
         pass
 
         # @abstractmethod

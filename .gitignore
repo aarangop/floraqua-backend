@@ -1,5 +1,6 @@
-# Environment variables
+# Environment variables and secrets
 .envrc
+.secrets
 # VS Code workspace config
 .vscode
 
